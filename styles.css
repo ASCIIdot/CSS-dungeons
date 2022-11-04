@@ -62,6 +62,29 @@ body {
     top: 50%;
 }
 
+#runCode {
+    position: relative;
+    z-index: 105;
+    width: 30px;
+    height: 30px;
+    grid-area: side-footer;
+    font-family: 'pxl';
+    border: solid 5px #353540;
+    background-color: #8b9150;
+    color: #ede4da;
+    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+    margin: auto;
+    margin-top: -20px;
+    font-size: 22pt;
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#runCode:hover {
+    height: 80px;
+}
+
 .Canvas {
     position: absolute;
     margin: auto;
@@ -81,9 +104,9 @@ sidebar {
     border-right: none;
     border-radius: 10px 0px 0px 10px;
     display: grid;
-    grid-template-areas: "side-tabs" "side-main" "side-base";
-    grid-template-rows: 30px auto auto;
-    overflow: none;
+    grid-template-areas: "side-tabs" "side-main" "side-base" "side-footer";
+    grid-template-rows: 30px 1fr 1fr 30px;
+    overflow: hidden;
     padding: 10px;
     position: absolute;
     z-index: 100;

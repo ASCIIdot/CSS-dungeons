@@ -95,8 +95,8 @@ document.addEventListener('click', (e) => {
 
 //the following are constant regular expressions that match valid CSS syntax and other expressions.
 const identifierRegEx = new RegExp(/[\w-[\]@:, ]*(?={)/); //matches foo{
-const propertyRegEx = new RegExp(/[\w-]*(?=:[\w-#" ]*(?=;))/); // matches foo:xxxx;
-const valueRegEx = new RegExp(/(?<=:)[\w\d\s#()]*(?=;)/); //matches :foo;
+const propertyRegEx = new RegExp(/[\w-]*(?=:[\w-%#" ]*(?=;))/); // matches foo:xxxx;
+const valueRegEx = new RegExp(/(?<=:)[\w\d\s#%()]*(?=;)/); //matches :foo;
 const hexRegEx = new RegExp(/(?<=#)[\w\d]*/); //matches #foo
 
 // need it to: 
@@ -145,19 +145,19 @@ function validateText() {
     }
 }
 
-if (validateText()[0] !== false) {
-    var target = document.getElementById('TARGET');
-    var textLines = validateText();
-    for (let i = 1; i < textLines.length - 1; i++) {
-        let property = textLines[i].match(propertyRegEx);
-        let value = textLines[i].match(valueRegEx);
-        target.style.setProperty(property, value);
-    };
-} else(
-    console.log(validateText()[1])
-);
-
-
+function runCode() {
+    if (validateText()[0] !== false) {
+        var target = document.getElementById('TARGET');
+        var textLines = validateText();
+        for (let i = 1; i < textLines.length - 1; i++) {
+            let property = textLines[i].match(propertyRegEx);
+            let value = textLines[i].match(valueRegEx);
+            target.style.setProperty(property, value);
+        };
+    } else(
+        console.log(validateText()[1])
+    );
+};
 
 
 // let pattern = /\w+/g;
