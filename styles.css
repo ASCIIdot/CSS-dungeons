@@ -46,6 +46,10 @@ body {
     z-index: -1;
 }
 
+#characters {
+    z-index: 0;
+}
+
 .myScreen {
     position: absolute;
     margin: auto;

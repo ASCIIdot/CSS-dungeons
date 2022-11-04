@@ -193,6 +193,108 @@ function runCode() {
 
 //i will go over this l8r
 
+var charCtx = null;
+// window.onload = function() {
+
+
+// };
+
+const finchSheet = new Image(); // Create new img element
+finchSheet.src = 'Assets/finchSpritesheet.png';
+
+function drawCharacters() {
+    if (charCtx == null) { return; }
+    console.log('draw');
+    charCtx.webkitImageSmoothingEnabled = false;
+    charCtx.imageSmoothingEnabled = false;
+
+
+    // Define the number of columns and rows in the sprite
+    let numColumns = 4;
+    let numRows = 3;
+    var yCoord = 100;
+    var xCoord = 100;
+    var column = 0;
+    var row = 0;
+    var direction = 1;
+
+    // Define the size of a frame
+    let frameWidth = finchSheet.width / numColumns;
+    let frameHeight = finchSheet.height / numRows;
+
+    window.addEventListener("keydown", function(event) {
+        if (event.defaultPrevented) {
+            return;
+        }
+        if (event.code === "ArrowDown") {
+
+            yCoord = yCoord + 5;
+            direction = 1;
+
+        } else if (event.code === "ArrowUp") {
+
+            yCoord = yCoord - 5;
+            direction = 2;
+
+        } else if (event.code === "ArrowLeft") {
+
+            xCoord = xCoord - 5;
+
+            direction = 3;
+
+        } else if (event.code === "ArrowRight") {
+
+            xCoord = xCoord + 5;
+            direction = 4;
+
+        } else { direction = 0; }
+
+        // event.preventDefault();
+    }, true);
+    // The sprite image frame starts from 0
+
+
+
+
+    setInterval(function() {
+        charCtx.clearRect(0, 0, 1200, 800);
+        charCtx.drawImage(finchSheet, column * frameWidth, row * frameHeight, frameWidth, frameHeight, xCoord, yCoord, frameWidth * 5, frameHeight * 5);
+        // setInterval(function() {
+        //     if (column != (16 * 3)) {
+        //         column = column + 16;
+        //     } else { column = 0 };
+        //     // switch (direction) {
+        //     //     case 1:
+
+
+        //     //         row = 0;
+        //     //         break;
+        //     //     case 2:
+
+        //     //         row = 16;
+        //     //         break;
+        //     //     case 3:
+
+        //     //         row = 32;
+        //     //         break;
+        //     //     case 4:
+
+        //     //         row = 32;
+        //     //         break;
+        //     //     default:
+
+        //     //         column = 0;
+
+        //     //         row = 0;
+        //     //         break;
+        //     // }
+
+        // }, 180);
+    }, 10);
+
+
+};
+
 //#endregion 
 
 //#region GAME_CANVAS
@@ -235,6 +337,8 @@ var gameMap2 = [
 window.onload = function() {
     ctx = document.getElementById('myScreen').getContext("2d");
     ctx2 = document.getElementById('layer2').getContext("2d");
+    charCtx = document.getElementById('characters').getContext("2d");
+    requestAnimationFrame(drawCharacters);
     requestAnimationFrame(drawGame);
     requestAnimationFrame(drawGameTwo);
     // ctx.font = "bold 10pt sans-serif";
