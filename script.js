@@ -151,7 +151,7 @@ function runCode() {
         var textLines = validateText();
         for (let i = 1; i < textLines.length - 1; i++) {
             let property = textLines[i].match(propertyRegEx);
-            let value = textLines[i].match(valueRegEx);
+            let value = textLines[i].match(valueRegEx); //it matches multiple properties :D
             target.style.setProperty(property, value);
         };
     } else(

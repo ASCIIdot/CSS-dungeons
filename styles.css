@@ -83,6 +83,7 @@ body {
 
 #runCode:hover {
     height: 80px;
+    margin-top: -35px;
 }
 
 .Canvas {
