@@ -102,7 +102,7 @@ const hexRegEx = new RegExp(/(?<=#)[\w\d]*/); //matches #foo
 // need it to: 
 // 1. grab and store input. [DONE]
 // 2. compare input against validator checks. [DONE]
-//3a. IF input is "valid", then try running the code with CSSDOM. 
+//3a. IF input is "valid", then try running the code with CSSDOM. [DONE]
 //3b. ELSE input is "invalid", and an appropriate error is returned, pointing out which line in RED. it may or may not be able to tell us which segment.
 
 
@@ -191,6 +191,10 @@ function runCode() {
 
 //#region GAME_FUNCTIONS
 
+
+// https://dev.to/martyhimmel/moving-a-sprite-sheet-character-with-javascript-3adg <--- USE THIS TUTORIAL AS A GUIDELINE
+
+
 //i will go over this l8r
 
 var charCtx = null;
@@ -253,43 +257,43 @@ function drawCharacters() {
     }, true);
     // The sprite image frame starts from 0
 
-
+    var animTimeCounter = 0;
 
 
     setInterval(function() {
         charCtx.clearRect(0, 0, 1200, 800);
         charCtx.drawImage(finchSheet, column * frameWidth, row * frameHeight, frameWidth, frameHeight, xCoord, yCoord, frameWidth * 5, frameHeight * 5);
-        // setInterval(function() {
-        //     if (column != (16 * 3)) {
-        //         column = column + 16;
-        //     } else { column = 0 };
-        //     // switch (direction) {
-        //     //     case 1:
+        // if (animTimeCounter != 18) {
+        //     animTimeCounter++;
+        // } else { animTimeCounter = 0; }
 
+        // if (column != (16 * 3)) {
+        //     column = column + 16;
+        // } else { column = 0 };
+        // switch (direction) {
+        //     case 1:
+        //         row = 0;
+        //         break;
+        //     case 2:
 
-        //     //         row = 0;
-        //     //         break;
-        //     //     case 2:
+        //         row = 16;
+        //         break;
+        //     case 3:
 
-        //     //         row = 16;
-        //     //         break;
-        //     //     case 3:
+        //         row = 32;
+        //         break;
+        //     case 4:
 
-        //     //         row = 32;
-        //     //         break;
-        //     //     case 4:
+        //         row = 32;
+        //         break;
+        //     default:
 
-        //     //         row = 32;
-        //     //         break;
-        //     //     default:
+        //         column = 0;
 
-        //     //         column = 0;
+        //         row = 0;
+        //         break;
+        // }
 
-        //     //         row = 0;
-        //     //         break;
-        //     // }
-
-        // }, 180);
     }, 10);
 
 
