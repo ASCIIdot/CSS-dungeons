@@ -520,6 +520,7 @@ toggleText {
     line-height: 20px;
     text-shadow: none;
     margin-left: 15px;
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 toggleArrow {
@@ -529,4 +530,9 @@ toggleArrow {
 
 e {
     color: #a94949;
+}
+
+.logToggled {
+    max-height: 0px;
+    font-size: 0;
 }

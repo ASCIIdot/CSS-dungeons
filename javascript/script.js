@@ -5,6 +5,7 @@ console.log("%cStarting...", "color:orange;font-size:18pt;"); //Start of program
 document.addEventListener('click', (e) => {
     // Retrieve id from clicked element
     let elementId = e.target.id;
+    let element = e.target.tagName.toLowerCase();
     let elementAttr = e.target.getAttribute("attribute");
     var bookpage = document.getElementById("bookpage");
     var HTMLwindow = document.getElementById("HTMLwindow");
@@ -84,10 +85,25 @@ document.addEventListener('click', (e) => {
         };
 
 
+    } else if (element == "toggletitle") {
+        console.log("%cTOGGLE TITLE CLICKED", "color:cyan;");
+
+        console.log("Siblings of toggle element:");
+
+
+        console.log($(element).next().next().prop("nodeName") + " was clicked THANK GOD");
+        // el = $(el).next();
+        // var textContents = toggleArrow.nextElementSibling;
+        if ($(element).next().next().hasClass("logToggled")) {
+            $(element).next().next().removeClass("logToggled");
+        } else { $(element).next().next().addClass("logToggled"); };
+
     } else {
         console.log("An element without an id or attribute was clicked.");
     };
 });
+
+
 
 //#endregion
 
