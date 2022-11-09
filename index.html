@@ -23,7 +23,7 @@
         <p id="hintText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, odio suscipit, officia quo perspiciatis, aliquid quas dolor possimus molestias dignissimos. Optio, alias nihil natus voluptatem saepe consequatur autem pariatur.</p>
     </div>
 
-    <div id="note" class="alertActive">
+    <div id="note" class="alertInactive">
         <noteIcon></noteIcon>
         <p id="noteTitle">ALERT</p>
         <p id="noteText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto numquam, odio suscipit, officia quo perspiciatis, aliquid quas dolor possimus molestias dignissimos. Optio, alias nihil natus voluptatem saepe consequatur autem pariatur.</p>
@@ -125,7 +125,7 @@
         </HtmlViewer>
         <Handbook>
             <tab attribute="HELP"></tab>
-            <page id="bookpage" class="switchedout">No Quests Active </page>
+            <page id="bookpage" class="switchedout"></page>
         </Handbook>
         <div id="footerButtonWrap">
             <button id="resetCode" class="codeButton" type="button" onclick="resetCode();">RESET</button>
@@ -137,7 +137,11 @@
     </toggleTab>
 
     <!-- Script link -->
-    <script src="script.js" type="text/javascript">
+    <script src="javascript/script.js" type="text/javascript">
+    </script>
+    <script src="javascript/functions.js" type="text/javascript">
+    </script>
+    <script src="javascript/hintOOP.js" type="text/javascript">
     </script>
 </body>
 

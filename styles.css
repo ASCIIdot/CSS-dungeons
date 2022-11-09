@@ -28,15 +28,15 @@ body {
 
 
 /* .stack {
-    position: relative;
+position: relative;
 } */
 
 
 /* .stack canvas {
-    position:absolute;
-    left:0;
-    top:0;
-    } */
+position:absolute;
+left:0;
+top:0;
+} */
 
 #myScreen {
     background-color: #8b9150;
@@ -226,6 +226,7 @@ textline {
 }
 
 #bookpage {
+    white-space: pre-wrap;
     position: absolute;
     grid-area: side-main;
     height: calc(82vh + 10px);
@@ -233,17 +234,18 @@ textline {
     display: absolute;
     overflow-y: scroll;
     overflow-x: hidden;
+    word-wrap: normal;
     background-color: #d4c2b6;
     border: solid 5px #353540;
     /* display: grid;
-    grid-template-areas: "lineNum lines";
-    grid-template-columns: 20px auto;
-    justify-items: stretch; */
+grid-template-areas: "lineNum lines";
+grid-template-columns: 20px auto;
+justify-items: stretch; */
     z-index: 1;
     width: 36vw;
     font-size: 22pt;
     color: #636167;
-    white-space: pre;
+    /* white-space: pre; */
     font-family: 'pxl';
     padding: 15px;
     box-sizing: border-box;
@@ -375,7 +377,7 @@ tab[attribute=HELP]:hover {
     content: "<";
 }
 
-.alert {
+.alertInactive {
     display: none;
     position: absolute;
     left: 40%;
@@ -383,11 +385,30 @@ tab[attribute=HELP]:hover {
     transition: bottom 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.alert {
+    position: absolute;
+    left: 40%;
+    bottom: -30%;
+    color: #353540;
+    padding-left: 10px;
+    z-index: 999;
+    left: 10%;
+    display: block;
+    position: absolute;
+    /* source | slice | width | outset | repeat */
+    width: 200px;
+    height: auto;
+    border: solid 2px #353540;
+    background-color: #d4c2b6;
+    border-image: url('Assets/speechBubbleOne.png') 3 8 8 3/ 15px 40px 40px 15px/ 15px 40px 40px 15px;
+}
+
 #hint {
     display: grid;
     grid-template-areas: "ico title" "txt txt";
     grid-template-columns: 50px auto;
     grid-template-rows: 50px auto;
+    transition: bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #note {
@@ -395,6 +416,7 @@ tab[attribute=HELP]:hover {
     grid-template-areas: "ico title" "txt txt";
     grid-template-columns: 50px auto;
     grid-template-rows: 50px auto;
+    transition: bottom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .alertActive {
@@ -422,6 +444,7 @@ tab[attribute=HELP]:hover {
 }
 
 #hintText {
+    color: #636167;
     grid-area: text;
     font-size: 20pt;
     line-height: 15pt;
@@ -438,6 +461,7 @@ tab[attribute=HELP]:hover {
 }
 
 #noteText {
+    color: #636167;
     font-size: 20pt;
     line-height: 15pt;
     grid-area: txt;
@@ -473,4 +497,36 @@ temp {
     background-color: red;
     opacity: 0.5;
     z-index: 1;
+}
+
+toggleTitle {
+    color: #636167;
+    margin-top: -5px;
+    grid-area: title;
+    font-size: 35pt;
+    position: relative;
+    text-shadow: 2px 2px #bdaa97;
+}
+
+toggleTitle:hover {
+    color: #947a9d;
+}
+
+toggleText {
+    color: #918d8d;
+    display: block;
+    word-wrap: initial;
+    font-size: 20pt;
+    line-height: 20px;
+    text-shadow: none;
+    margin-left: 15px;
+}
+
+toggleArrow {
+    display: inline;
+    writing-mode: vertical-rl;
+}
+
+e {
+    color: #a94949;
 }
