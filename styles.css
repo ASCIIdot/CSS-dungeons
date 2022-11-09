@@ -428,7 +428,7 @@ tab[attribute=HELP]:hover {
     position: absolute;
     bottom: 60px;
     /* source | slice | width | outset | repeat */
-    width: 200px;
+    min-width: 200px;
     height: auto;
     border: solid 2px #353540;
     background-color: #d4c2b6;
@@ -528,6 +528,10 @@ toggleArrow {
     writing-mode: vertical-rl;
 }
 
+toggleArrow::after {
+    content: ">";
+}
+
 e {
     color: #a94949;
 }
@@ -535,4 +539,8 @@ e {
 .logToggled {
     max-height: 0px;
     font-size: 0;
+}
+
+.logToggledArrow::after {
+    content: "<";
 }

@@ -3,9 +3,10 @@ var hintTitle = document.getElementById("hintTitle");
 var hintText = document.getElementById("hintText");
 var helpLog = document.getElementById("bookpage");
 
-class hint {
-    constructor(id, title, descshorthand, desclong) {
+class HINT {
+    constructor(id, timeout, title, descshorthand, desclong) {
         this.id = id;
+        this.timeout = timeout;
         this.title = title;
         this.descshorthand = descshorthand;
         this.desclong = desclong;
@@ -21,7 +22,7 @@ class hint {
             hintWrapper.classList.add("alert");
 
             this.newHelpLog()
-        }, 1000);
+        }, this.timeout);
 
     }
     async newHelpLog() {
@@ -31,20 +32,22 @@ class hint {
         const temp = document.createElement("toggleTitle");
         temp.innerText = this.title;
         tempwrap.appendChild(temp);
+        temp.id = this.id;
         // temp.classList.add("collapsible");
         const tempContents = document.createElement("toggleText");
         tempContents.innerHTML = this.desclong;
         $(temp).after(tempContents);
         const tempArrow = document.createElement("toggleArrow");
-        tempArrow.innerText = ">";
+        // tempArrow.innerText = ">";
         $(temp).after(tempArrow);
         // tempContents.classList.add("content");
     }
 }
 
-let hint0 = new hint(0, "WELCOME", "Check out the HELP tab to get started!", "This is your help Log. You will see <e>Hints</e> and <e>Quests</e> logged here.<br>You can click on the title of any entry here to toggle its visibility.");
-let hint1 = new hint(1, "CAN YOU HEAR ME", "oh thank god", "I was really getting worried there!")
+
+var hint1 = new HINT("ht1", 4000, "HEY IS THIS THING ON", "Can you hear me?", "Oh you can! I was really getting worried there!")
+var hint0 = new HINT("ht0", 1000, "WELCOME", "Check out the HELP tab to get started!", "This is your help Log. You will see <e>Hints</e> and <e>Quests</e> logged here.<br>You can click on the title of any entry here to toggle its visibility.");
 hint0.flag();
 setTimeout(() => {
     hint1.flag();
-}, 3000);
+}, 5000);

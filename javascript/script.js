@@ -11,7 +11,23 @@ document.addEventListener('click', (e) => {
     var HTMLwindow = document.getElementById("HTMLwindow");
     var editor = document.getElementById("CssEditArea");
     // If element has id
-    if (elementId !== '') {
+    if (element == "toggletitle") {
+        console.log("%cTOGGLE TITLE CLICKED", "color:cyan;");
+        // console.log(elementId + " was Clicked.");
+        let currentId = document.getElementById(elementId);
+        // console.log("Siblings of toggle element:");
+        // console.log($(currentId).next().next().tagName + " was clicked THANK GOD");
+        // el = $(el).next();
+        // var textContents = toggleArrow.nextElementSibling;
+        if ($(currentId).next().next().hasClass("logToggled")) {
+            $(currentId).next().next().removeClass("logToggled");
+            $(currentId).next().removeClass("logToggledArrow");
+        } else {
+            $(currentId).next().next().addClass("logToggled");
+            $(currentId).next().addClass("logToggledArrow");
+        };
+
+    } else if (elementId !== '') {
         switch (elementId) {
             case "toggleTab":
                 console.log("%cTOGGLETAB Clicked", "color:cyan;");
@@ -84,19 +100,6 @@ document.addEventListener('click', (e) => {
                 break;
         };
 
-
-    } else if (element == "toggletitle") {
-        console.log("%cTOGGLE TITLE CLICKED", "color:cyan;");
-
-        console.log("Siblings of toggle element:");
-
-
-        console.log($(element).next().next().prop("nodeName") + " was clicked THANK GOD");
-        // el = $(el).next();
-        // var textContents = toggleArrow.nextElementSibling;
-        if ($(element).next().next().hasClass("logToggled")) {
-            $(element).next().next().removeClass("logToggled");
-        } else { $(element).next().next().addClass("logToggled"); };
 
     } else {
         console.log("An element without an id or attribute was clicked.");
