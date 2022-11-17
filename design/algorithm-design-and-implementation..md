@@ -1,2 +1,0 @@
-# Algorithm design and Implementation.
-
