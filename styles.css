@@ -354,7 +354,7 @@ tab[attribute=HTML]::after {
 }
 
 tab[attribute=HELP]::after {
-    content: " QUESTS";
+    content: "HELP";
 }
 
 tab[attribute=HTML]:hover {
@@ -543,4 +543,24 @@ e {
 
 .logToggledArrow::after {
     content: "<";
+}
+
+syntax {
+    line-height: 35px;
+    font-size: larger;
+    color: #947a9d;
+}
+
+#getHint {
+    border: solid 5px #353540;
+    width: 30px;
+    height: 30px;
+    font-family: 'pxl';
+    color: #ede4da;
+    border-radius: 10px;
+    width: 100px;
+    height: 70px;
+    font-size: 22pt;
+    background-color: #e8c65b;
+    transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
