@@ -14,6 +14,7 @@
     * [1.4.1](design/algorithm-design-and-implementation./1.4.1.md)
     * [1.4.3](design/algorithm-design-and-implementation./1.4.3.md)
     * [2.1](design/algorithm-design-and-implementation./2.1.md)
+    * [Progression system](design/algorithm-design-and-implementation./progression-system.md)
   * [Interface Design](design/interface-design.md)
   * [Data storage](design/data-storage.md)
   * [Key variables/data structures/classes](design/key-variables-data-structures-classes.md)
