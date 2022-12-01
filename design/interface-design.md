@@ -18,7 +18,9 @@ Another thing that was brought up, was that the interface was not obvious enough
 
 The first thing that was redesigned was the base layout.
 
-![](<../.gitbook/assets/image (5).png>)Instead of all the different areas for different things, it was cut to two main visual parts: The canvas- Centered, and the biggest area by far- and the Side Tab, which partially covers the canvas. The Side tab will have buttons to toggle what the currect focus is- Whether the user wants to view the HTML, to write CSS, or check the help and hint log.
+Instead of all the different areas for different things, it was cut to two main visual parts: The canvas- Centered, and the biggest area by far- and the Side Tab, which partially covers the canvas. The Side tab will have buttons to toggle what the currect focus is- Whether the user wants to view the HTML, to write CSS, or check the help and hint log.
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
