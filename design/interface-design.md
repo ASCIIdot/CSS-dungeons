@@ -4,7 +4,7 @@ Inititally on designing the interface, I wanted to go for an old style dungeon c
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>The initial GUI mockup.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Screenshot of the steam game "BitBurner"</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Screenshot of the steam game "BitBurner"</p></figcaption></figure>
 
 However, after showing the stakeholders this design concept, many of them reported that it was too "hard to look at", and that the dark colours and monochrome made it incredibly hard to read. One of them suggested that instead of an RPG text box, speech bubbles or hints should be used, as the RPG box may leave empty space when its not relevant to solving a problem. On discussing this suggestion with the rest of the stakeholders, the majority ( 4/5 ) agreed.&#x20;
 
@@ -24,7 +24,7 @@ Instead of all the different areas for different things, it was cut to two main 
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>the final layout</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 This is how the new layout and pallette translates.
 
