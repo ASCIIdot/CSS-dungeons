@@ -20,11 +20,11 @@ The first thing that was redesigned was the base layout.
 
 Instead of all the different areas for different things, it was cut to two main visual parts: The canvas- Centered, and the biggest area by far- and the Side Tab, which partially covers the canvas. The Side tab will have buttons to toggle what the currect focus is- Whether the user wants to view the HTML, to write CSS, or check the help and hint log.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>very bad doodle illustrating such</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>the final layout</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 This is how the new layout and pallette translates.
 
